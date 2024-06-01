@@ -1,4 +1,6 @@
 <?php
+	session_start();
+	
 	$id = $_POST['id'];
     $pwd = $_POST['password'];
 
@@ -14,7 +16,9 @@
 		if($total_records>0){
 			$row = mysqli_fetch_assoc($result);
 			$name = $row["name"];
+			$_SESSION['id'] = $id; 
 			echo '<h1>' . $name . ' 您好</h1>';
+			echo '<h3>id為'. $id . '</h3>';
 			echo '<a href="student1.php">進入考試頁面</a>';
 		}else{
 			echo '帳/密錯誤<br><a href=login.html>回登入畫面</a>';
