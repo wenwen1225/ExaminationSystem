@@ -53,16 +53,13 @@
 	date_default_timezone_set('Asia/Taipei');
 	$testDate = date('Y-m-d H:i:s');
 
-	// 插入数据库
 	if (isset($grade)) {
 		$insertSql = "INSERT INTO grade (testDate, id, grade) VALUES ('$testDate', '$user_id', '$grade')";
 		if (mysqli_query($link, $insertSql)) {
-			echo "成绩已成功插入数据库。";
+			echo "成績已成功寫入資料庫";
 		} else {
-			echo "插入数据库时发生错误：" . mysqli_error($link);
+			echo "寫入時出錯" . mysqli_error($link);
 		}
-	} else {
-		echo "无法插入成绩：成绩未定义。";
 	}
 
 	mysqli_close($link);
@@ -74,3 +71,6 @@
 <p>選擇題得分：<?php echo $selectionScore; ?> 分</p>
 <hr>
 <p>總分：<?php echo $grade ?> 分</p>
+
+
+<a href="login.html">登出</a>
