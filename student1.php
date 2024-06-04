@@ -11,7 +11,7 @@
 
 	$sql = "SELECT * FROM truefalse ORDER BY RAND() LIMIT 5";
 	echo '<h1>是非題</h1>';
-	echo '<p>您的ID是：' . $user_id . '</p>'; // 显示用户ID
+	echo '<p>您的ID是：' . $user_id . '</p>'; 
 	echo '<form method="post" action="student2.php">';
 	echo '<table border>';
 	echo '<tr bgcolor="green" align="center"><td>ID</td><td>問題</td><td>你的答案</td></tr>';

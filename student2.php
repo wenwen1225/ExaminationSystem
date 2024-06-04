@@ -10,7 +10,7 @@ $link = @mysqli_connect(
 );
 
 echo '<h1>選擇題</h1>';
-echo '<p>您的ID是：' . $user_id . '</p>'; // 显示用户ID
+echo '<p>您的ID是：' . $user_id . '</p>'; 
 
 echo '<form method="post" action="score.php">';
 
